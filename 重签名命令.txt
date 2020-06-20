@@ -1,0 +1,24 @@
+反编译并生成目录
+./apktool.bat d -o apk.out source.apk
+打包
+./apktool.bat b -o dst.apk apk.out
+
+jarsigner -verbose -keystore lzgame.keystore -storepass lzgame123 -signedjar yxjhsamsung_sign.apk -digestalg SHA1 -sigalg MD5withRSA dst.apk lzgame
+【jarsigner -verbose -keystore lzgame.keystore -storepass lzgame123 -signedjar yxjhsamsung_sign.apk -digestalg SHA1 -sigalg MD5withRSA yxjhsamsung.apk lzgame】
+
+
+
+
+
+反编译并生成目录
+./apktool.bat d -o apk.out source.apk
+
+打包
+./apktool.bat b -o dst.apk apk.out
+
+重签名
+cd 'C:\Program Files\Java\jdk1.8.0_212\bin\'
+
+.\jarsigner.exe -verbose -keystore 'D:\lztools\lzgame_keystore\lzgame.keystore' -signedjar 'C:\Users\gzzh\Desktop\dst_signed.apk' 'C:\Users\gzzh\Desktop\dst.apk' lzgame
+
+lzgame123
